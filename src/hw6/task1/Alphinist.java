@@ -1,4 +1,4 @@
-package ru.itmo.homeworks.homework6.task1;
+package hw6.task1;
 
 public class Alphinist {
     // имя (не менее 3 символов)

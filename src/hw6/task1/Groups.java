@@ -1,8 +1,4 @@
-package ru.itmo.homeworks.homework6.task1;
-
-import ru.itmo.homeworks.homework6.task1.Alphinist;
-
-import java.util.SplittableRandom;
+package hw6.task1;
 
 public class Groups {
     // название группы

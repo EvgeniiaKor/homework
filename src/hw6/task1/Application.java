@@ -1,10 +1,10 @@
-package ru.itmo.homeworks.homework6.task1;
+package hw6.task1;
 
 public class Application {
     public static void main(String[] args) {
 
             // альпинисты
-            Alphinist [] alpinists1 = new Alphinist[3];
+            Alphinist[] alpinists1 = new Alphinist[3];
             alpinists1[0] = new Alphinist("Maxim");
             alpinists1[1] = new Alphinist("Ivan");
             alpinists1[2] = new Alphinist("Olga");
