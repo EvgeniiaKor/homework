@@ -8,25 +8,21 @@ public class Groups {
     private String groupName;
     private boolean openGroup;
     private Alphinist[] alphinists;
-    private Mountain goMountain;
+    private Mountain mountain;
 
-    // конструктор
-    public  Groups (boolean open, Alphinist[] alphinists){
+    public  Groups (boolean openGroup,Alphinist[] alphinists){
         setOpenGroup(openGroup);
+        setMountain(mountain);
         setAlphinists(alphinists);
     }
 
-    // сеттер для openGroup
-    public  void setOpenGroup(boolean openGroup){
-        this.openGroup = openGroup;
-    }
 
-    // геттер для openGroup
-    public String getOpenGroup(){
-        return  openGroup;
-    }
+    public String getGroupName(){return  groupName;}
+    public Boolean getOpenGroup(){return  openGroup;}
+    public Alphinist[] getAlphinists(){return alphinists;}
+    public Mountain getMountain() {return mountain;}
 
-    // сеттер для groupName
+
     public  void setGroupName(String groupName){
         if (groupName == null || groupName.length()< 2){
             throw new IllegalArgumentException("groupName от 2 символов");
@@ -34,12 +30,10 @@ public class Groups {
         this.groupName = groupName;
     }
 
-    // геттер для groupName
-    public String getGroupName(){
-        return  groupName;
+    public  void setOpenGroup(boolean openGroup){
+        this.openGroup = openGroup;
     }
 
-    // сеттер для массива альпинистов
     public  void setAlphinists(Alphinist[] alphinists){
         if (alphinists.length == 0){
             throw new IllegalArgumentException("Должен быть хотя бы 1 элемент");
@@ -47,22 +41,11 @@ public class Groups {
         this.alphinists = alphinists;
     }
 
-    // геттер для альпинистов
-    public Alphinist[] getAlphinists(){
-        return alphinists;
+    public  void setMountain(Mountain mountain) {
+        this.mountain = mountain;
     }
 
-    // сеттер для goMountain
-    public  void setGoMountain(Mountain goMountain) {
-        this.goMountain = goMountain;
-    }
-
-    // геттер для goMountain
-    public Mountain getGoMountain() {
-        return goMountain;
-    }
-
-    // добавить альпиниста
+////
     public  void  addAlphinist(Alphinist alphinist){
         if (openGroup == false){
             System.out.println("мест нет");
@@ -75,6 +58,12 @@ public class Groups {
             }
             System.out.println("Набор в группу окончен");
             openGroup = false;
+        }
+    }
+
+    public  void addAlpinists(Alphinist...alphinists){
+        for(Alphinist alphinist: alphinists){
+            addAlpinists(alphinists);
         }
     }
 }

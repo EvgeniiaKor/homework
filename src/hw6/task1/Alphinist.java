@@ -6,29 +6,27 @@ public class Alphinist {
     private String name;
     private String adress;
 
-    // сеттер для name
-    public void setName(String nameValue){
-        if ( nameValue == null || nameValue.length() < 3){
+    public void setName(String name){
+        if ( name == null || name.length() < 3){
             throw new IllegalArgumentException("Значение name от 3 символов");
         }
-        name = nameValue;
+        this.name = name;
     }
-
-    // геттер для name
+    public void setAdress(String adress){
+        if ( adress == null || adress.length() < 5){
+            throw new IllegalArgumentException("Значение adress от 5 символов");
+        }
+        this.adress = adress;
+    }
     public String getName(){
         return  name;
     }
-
-    // сеттер для adress
-    public void setAdress(String adressValue){
-        if ( adressValue == null || adressValue.length() < 5){
-            throw new IllegalArgumentException("Значение adress от 5 символов");
-        }
-        adress = adressValue;
-    }
-
-    // геттер для adress
     public String getAdress(){
         return adress;
+    }
+
+    public Alphinist(String name, String adress){
+        setName(name);
+        setAdress(adress);
     }
 }
