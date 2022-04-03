@@ -6,7 +6,6 @@ import java.time.temporal.ChronoUnit;
 
 public class Client {
 
-    //задаем приватные переменные свойств держателя абонемента:
     private String clientName;
     private LocalDate clientYear;
 
